@@ -8,5 +8,5 @@ public interface TravisUser {
     String getAvatarUrl();
     boolean getEducation();
     boolean isSync();
-    LocalDateTime getSyncedAt();
+    String getSyncedAt();
 }

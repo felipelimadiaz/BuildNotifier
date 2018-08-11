@@ -1,3 +1,3 @@
 public interface TravisApi {
-    TravisUser getUser();
+    TravisUser getUser() throws Exception;
 }
