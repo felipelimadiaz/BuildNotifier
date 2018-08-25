@@ -15,7 +15,7 @@ public class TravisApiImpl implements TravisApi {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Travis-API-Version", "3" );
         connection.setRequestProperty("User-Agent", "API Explorer" );
-        connection.setRequestProperty("Authorization", "token K587Qe4e_J3orR95Zeb2Jw" );
+        connection.setRequestProperty("Authorization", "token mUPHlKB7W8VQfrLq25L8cw" );
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
@@ -39,4 +39,16 @@ public class TravisApiImpl implements TravisApi {
 
         return travisUser;
     }
+
+    @Override
+    public TravisBuild getPassed() throws Exception {
+        String response = this.sendGet("https://api.travis-ci.org/repo/vitorgroter%2Fhelloworld_java/builds");
+
+        Gson gson = new GsonBuilder().create();
+        TravisRepo travisRepo = gson.fromJson(response, TravisRepoImpl.class);
+
+        return travisRepo.getBuilds()[0];
+    }
+
+
 }
