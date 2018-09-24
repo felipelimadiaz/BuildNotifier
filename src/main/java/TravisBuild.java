@@ -1,3 +1,3 @@
 public interface TravisBuild {
-    String getState();
+    String getState(String state);
 }
