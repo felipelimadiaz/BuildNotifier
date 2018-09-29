@@ -1,6 +1,6 @@
-import java.time.LocalDateTime;
+package buildnotifier.Travis;
 
-public class TravisUserImpl implements TravisUser {
+class TravisUserImpl implements TravisUser {
     private int id;
     private String login;
     private String name;
