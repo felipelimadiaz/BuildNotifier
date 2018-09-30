@@ -1,8 +1,5 @@
 package buildnotifier;
 
-import buildnotifier.Travis.RepoImpl;
-import buildnotifier.Travis.TravisBuildData;
-import buildnotifier.Travis.TravisRepoData;
 
 public class ConsoleUI implements Observer {
     private Repo repo;

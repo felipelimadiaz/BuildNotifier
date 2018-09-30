@@ -32,7 +32,13 @@ public class RepoImpl implements Repo {
         TravisBuildData[] buildsNew = this.travisApi.getRepoData().getBuilds();
         int count = 0;
         boolean hasChanged = false;
+        if (buildsNew.length != listBuilds.size()){
+            BuildImpl build = new BuildImpl();
+            build.setState(buildsNew[1].getState());
+            listBuilds.add(0, build);
+        }
         for (TravisBuildData buildData : buildsNew){
+
             hasChanged = !listBuilds.get(count).getState().equalsIgnoreCase(buildData.getState());
 
             listBuilds.remove(count);
