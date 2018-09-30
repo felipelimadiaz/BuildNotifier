@@ -1,5 +1,5 @@
 package buildnotifier;
 
-public interface Build extends Observable {
+public interface Build {
     String getState();
 }

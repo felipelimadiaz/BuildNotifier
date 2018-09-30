@@ -7,9 +7,4 @@ class TravisRepoDataImpl implements TravisRepoData {
         return builds;
     }
 
-    @Override
-    public void refresh() {
-
-    }
-
 }

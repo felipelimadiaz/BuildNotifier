@@ -1,16 +1,16 @@
-import buildnotifier.Travis.TravisApi;
-import buildnotifier.Travis.TravisApiImpl;
-import buildnotifier.Travis.TravisRepoData;
+import buildnotifier.Repo;
+import buildnotifier.RepoFactory;
+import buildnotifier.Travis.RepoFactoryImpl;
 import buildnotifier.ConsoleUI;
 
 public class Program {
     public static void main(String[] args) throws Exception {
-        TravisApi travisApi = new TravisApiImpl();
-        TravisRepoData travisRepo = travisApi.getPassed();
-        ConsoleUI console = new ConsoleUI(travisRepo);
+        RepoFactory repoFactory = new RepoFactoryImpl();
+        Repo repo = repoFactory.getRepo();
+        ConsoleUI console = new ConsoleUI(repo);
         while (true){
-            travisRepo.refresh();
-            Thread.sleep(10*1000);
+            Thread.sleep(4*1000);
+            repo.refresh();
         }
     }
 

@@ -12,7 +12,7 @@ public class BuildImpl implements Build {
         return this.state;
     }
 
-    @Override
+    /*@Override
     public void addObserver(buildnotifier.Observer observer) {
         this.listObserver.add(observer);
     }
@@ -27,15 +27,10 @@ public class BuildImpl implements Build {
         {
             observer.update();
         }
-    }
+    }*/
 
-    private void setState(String state) throws Exception {
-        if (this.state != state)
-        {
-            this.state = state;
-            this.notifyObserver();
-        }
-
+    protected void setState(String state) throws Exception {
+        this.state = state;
     }
 
 }

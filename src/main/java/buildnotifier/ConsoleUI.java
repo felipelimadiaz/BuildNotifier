@@ -1,13 +1,15 @@
 package buildnotifier;
 
+import buildnotifier.Travis.RepoImpl;
 import buildnotifier.Travis.TravisBuildData;
 import buildnotifier.Travis.TravisRepoData;
 
 public class ConsoleUI implements Observer {
-    private TravisRepoData travisRepo;
+    private Repo repo;
 
-    public ConsoleUI(TravisRepoData travisRepo) throws Exception {
-        this.travisRepo = travisRepo;
+    public ConsoleUI(Repo repo) throws Exception {
+        this.repo = repo;
+        this.repo.addObserver(this);
         this.printBuilds();
     }
 
@@ -17,7 +19,11 @@ public class ConsoleUI implements Observer {
     }
 
     private void printBuilds()throws Exception{
-        TravisBuildData build = this.travisRepo.getBuilds()[0];
-        System.out.println(build.getState());
+        for (Build build : this.repo.getBuilds())
+        {
+            System.out.println(build.getState());
+        }
+
+        System.out.println();
     }
 }
