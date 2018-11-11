@@ -2,23 +2,26 @@ package buildnotifier.Travis;
 import buildnotifier.Build;
 import buildnotifier.Observer;
 import buildnotifier.Repo;
+import javafx.concurrent.WorkerStateEvent;
+import javafx.event.EventHandler;
+import javafx.util.Duration;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepoImpl implements Repo {
-    TravisApi travisApi;
+    RepoDataService repoDataService;
     ArrayList<Build> listBuilds = new ArrayList<Build>();
     ArrayList<Observer> listObservers = new ArrayList<Observer>();
 
 
-    public RepoImpl(TravisApi travisApi) throws Exception {
-        this.travisApi = travisApi;
-        TravisBuildData[] buildsOld =  this.travisApi.getRepoData().getBuilds();
-        for (TravisBuildData buildData : buildsOld){
-            BuildImpl build = new BuildImpl();
-            build.setState(buildData.getState());
-            listBuilds.add(build);
-        }
+    public RepoImpl(RepoDataService repoDataService) throws Exception {
+        this.repoDataService = repoDataService;
+
+        repoDataService.setOnSucceeded(new RepoEventsHandler(this));
+        this.repoDataService.setPeriod(Duration.seconds(5));
+
+        this.repoDataService.start();
     }
 
     @Override
@@ -29,27 +32,7 @@ public class RepoImpl implements Repo {
 
     @Override
     public void refresh() throws Exception {
-        TravisBuildData[] buildsNew = this.travisApi.getRepoData().getBuilds();
-        int count = 0;
-        boolean hasChanged = false;
-        if (buildsNew.length != listBuilds.size()){
-            BuildImpl build = new BuildImpl();
-            build.setState(buildsNew[1].getState());
-            listBuilds.add(0, build);
-        }
-        for (TravisBuildData buildData : buildsNew){
-
-            hasChanged = !listBuilds.get(count).getState().equalsIgnoreCase(buildData.getState());
-
-            listBuilds.remove(count);
-            BuildImpl buildNew = new BuildImpl();
-            buildNew.setState(buildData.getState());
-            listBuilds.add(count, buildNew);
-            count++;
-
-            if (hasChanged)
-                this.notifyObserver();
-        }
+        this.repoDataService.start();
     }
 
     @Override
@@ -65,6 +48,35 @@ public class RepoImpl implements Repo {
     private void notifyObserver() throws Exception {
         for (Observer observer : this.listObservers){
             observer.update();
+        }
+    }
+
+    private class RepoEventsHandler implements EventHandler<WorkerStateEvent> {
+
+        private RepoImpl repoImplParent;
+
+        public RepoEventsHandler(RepoImpl repoImplParent){
+            this.repoImplParent = repoImplParent;
+        }
+
+        @Override
+        public void handle(WorkerStateEvent t)  {
+            try{
+                TravisRepoData travisRepoData = (TravisRepoData) t.getSource().getValue();
+                TravisBuildData[] buildsOld = travisRepoData.getBuilds();
+                listBuilds.clear();
+                for (TravisBuildData buildData : buildsOld) {
+                    BuildImpl build = new BuildImpl();
+                    build.setState(buildData.getState());
+                    listBuilds.add(build);
+                }
+
+                this.repoImplParent.notifyObserver();
+            }
+            catch(Exception e){
+
+            }
+
         }
     }
 }

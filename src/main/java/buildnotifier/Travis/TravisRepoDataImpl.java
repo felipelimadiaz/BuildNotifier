@@ -1,6 +1,6 @@
 package buildnotifier.Travis;
 
-class TravisRepoDataImpl implements TravisRepoData {
+public class TravisRepoDataImpl implements TravisRepoData {
     TravisBuildDataImpl[] builds;
     @Override
     public TravisBuildData[] getBuilds() {

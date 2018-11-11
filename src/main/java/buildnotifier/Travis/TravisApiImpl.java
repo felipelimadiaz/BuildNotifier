@@ -1,5 +1,4 @@
 package buildnotifier.Travis;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
@@ -18,7 +17,6 @@ public class TravisApiImpl implements TravisApi {
         connection.setRequestProperty("Travis-API-Version", "3" );
         connection.setRequestProperty("User-Agent", "API Explorer" );
         connection.setRequestProperty("Authorization", "token mUPHlKB7W8VQfrLq25L8cw" );
-
 
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
