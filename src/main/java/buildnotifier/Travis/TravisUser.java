@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+package buildnotifier.Travis;
 
 public interface TravisUser {
     int getId();

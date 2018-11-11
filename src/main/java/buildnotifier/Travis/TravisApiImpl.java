@@ -1,3 +1,4 @@
+package buildnotifier.Travis;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
@@ -16,6 +17,7 @@ public class TravisApiImpl implements TravisApi {
         connection.setRequestProperty("Travis-API-Version", "3" );
         connection.setRequestProperty("User-Agent", "API Explorer" );
         connection.setRequestProperty("Authorization", "token mUPHlKB7W8VQfrLq25L8cw" );
+
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
@@ -41,13 +43,13 @@ public class TravisApiImpl implements TravisApi {
     }
 
     @Override
-    public TravisBuild getPassed() throws Exception {
+    public TravisRepoData getRepoData() throws Exception {
         String response = this.sendGet("https://api.travis-ci.org/repo/vitorgroter%2Fhelloworld_java/builds");
 
         Gson gson = new GsonBuilder().create();
-        TravisRepo travisRepo = gson.fromJson(response, TravisRepoImpl.class);
+        TravisRepoData travisRepo = gson.fromJson(response, TravisRepoDataImpl.class);
 
-        return travisRepo.getBuilds()[0];
+        return travisRepo;
     }
 
 
