@@ -31,11 +31,6 @@ public class RepoImpl implements Repo {
     }
 
     @Override
-    public void refresh() throws Exception {
-        this.repoDataService.start();
-    }
-
-    @Override
     public void addObserver(Observer observer) {
        this.listObservers.add(observer);
     }

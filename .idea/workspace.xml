@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92b3a4c3-2651-443d-883b-d6478173845a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/JavaFxUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/RepoFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/RepoFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/RepoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/RepoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/TravisApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/TravisApiImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/TravisRepoDataImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/buildnotifier/Travis/TravisRepoDataImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/ConsoleUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoFactoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisApiImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisRepoDataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisRepoDataImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,8 +25,8 @@
       <file leaf-file-name="RepoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+            <state relative-caret-position="406">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#280#287#0" expanded="true" />
@@ -54,6 +38,15 @@
                 <element signature="e#3194#3195#0" expanded="true" />
                 <element signature="e#3253#3254#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -97,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="51">
+              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -523,7 +516,6 @@
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Build.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/ConsoleUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/BuildImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisApiImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/TravisRepoDataImpl.java" />
@@ -532,10 +524,11 @@
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/JavaFxUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="788" />
     <option name="y" value="47" />
     <option name="width" value="1400" />
@@ -722,12 +715,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50104165" side_tool="true" weight="0.2998944" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.24815206" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.24815206" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -749,14 +742,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager>
@@ -981,13 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1101,10 +1079,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Travis/RepoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+        <state relative-caret-position="406">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#280#287#0" expanded="true" />
@@ -1119,7 +1104,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/buildnotifier/Repo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
